@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.46/moment-timezone-with-data-1970-2030.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/emoji-js/3.8.1/emoji.min.js"></script>
     <title>My-world-clock-app</title>
     <link rel="stylesheet" href="src/style.css" />
   </head>
@@ -15,35 +19,37 @@
       <main>
         <select name="countries" id="countries">
           <option value=""><strong>Choose a city...</strong></option>
-          <option value="los-angels">Los Angels 🇺🇸</option>
-
+          <option value="vancouver">Vancouver 🇨🇦</option>
+          <option value="new-york">New York 🇺🇸</option>
           <option value="paris">Paris 🇫🇷</option>
+          <option value="tokyo">Tokyo 🇯🇵</option>
         </select>
 
-        <div class="city">
-          <div class="city-us">
-            <h2>Los Angels 🇺🇸</h2>
+        <div class="city" id="vancouver">
+          <div>
+            <h2>Vancouver 🇨🇦</h2>
+            <div class="date" id="date"></div>
+          </div>
+          <div class="time" id="time"><small>AM</small></div>
+        </div>
+
+        <div class="city" id="new-york">
+          <div>
+            <h2>New York 🇺🇸</h2>
             <div class="date">January 21, 2015</div>
           </div>
           <div class="time">1:12:23 <small>AM</small></div>
         </div>
-        <div class="city">
-          <div class="city-jp">
+        <div class="city" id="paris">
+          <div>
+            <h2>Paris 🇫🇷</h2>
+            <div class="date">January 21, 2015</div>
+          </div>
+          <div class="time">1:12:23 <small>AM</small></div>
+        </div>
+        <div class="city" id="tokyo">
+          <div>
             <h2>Tokyo 🇯🇵</h2>
-            <div class="date">January 21, 2015</div>
-          </div>
-          <div class="time">1:12:23 <small>AM</small></div>
-        </div>
-        <div class="city">
-          <div class="city-ru">
-            <h2>Moscow 🇷🇺</h2>
-            <div class="date">January 21, 2015</div>
-          </div>
-          <div class="time">1:12:23 <small>AM</small></div>
-        </div>
-        <div class="city">
-          <div class="city-gb">
-            <h2>London 🇬🇧</h2>
             <div class="date">January 21, 2015</div>
           </div>
           <div class="time">1:12:23 <small>AM</small></div>
